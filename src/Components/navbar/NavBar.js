@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
 import Drawer from 'material-ui/Drawer'
-import Button from 'material-ui/Button'
-import List from 'material-ui/List'
-import Divider from 'material-ui/Divider'
 import SimpleList from './SimpleList'
 import AppBar from 'material-ui/AppBar'
 import Toolbar from 'material-ui/Toolbar'
 import Typography from 'material-ui/Typography'
 import IconButton from 'material-ui/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
+import { createMuiTheme } from 'material-ui/styles'
 
-export default class SideNav extends Component {
+// <==== Reusable Colors ====>//
+const [bgColor, fontColor, particleColor] = ['#222930', '#E9E9E9', '#4EB1BA']
+
+class Navbar extends Component {
   state = {
     left: false
   }
@@ -26,7 +27,6 @@ export default class SideNav extends Component {
           <Toolbar>
             <IconButton color='inherit' aria-label='Menu'>
               <MenuIcon onClick={this.toggleDrawer('left', true)} />
-
             </IconButton>
             <Typography variant='title' color='inherit'>
               Hello, Im Luis
@@ -50,3 +50,5 @@ export default class SideNav extends Component {
     )
   }
 }
+
+export default Navbar

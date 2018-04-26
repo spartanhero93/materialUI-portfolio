@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import Button from 'material-ui/Button'
-import SideNav from './Components/Navbar/SideNav'
+import Navbar from './Components/navbar/NavBar'
+import BottomNav from './Components/bottomNavbar/BottomNav'
 
 class App extends Component {
   render () {
     return (
       <div>
-        <SideNav />
+        <Navbar />
+        <BottomNav />
       </div>
     )
   }
